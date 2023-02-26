@@ -1,0 +1,135 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello World");
+		//interger();
+		//Switch();
+		//Forloop();
+		//DoWhile();
+		Stars();
+	}
+	public static void interger()
+    {
+            int intdata = 0;
+           // string stringdata = "";
+            Console.Write("Please Enter your name:");
+            string str = Console.ReadLine();
+            bool validUser = int.TryParse(str , out intdata);
+            if(validUser){
+                string da = str == "5" ? "good": str == "7" ?"true":"false";
+                Console.WriteLine(da);
+            }
+		else{
+			Console.WriteLine("False");
+      }
+	}
+	public static void Switch()
+	{
+		Console.Write("Enter Text");
+		string read = Console.ReadLine();
+		switch(read){
+			case "dd" :
+				Console.WriteLine("Good");
+			break;
+			case "ss" :
+				Console.WriteLine("Bad");
+			break;
+			default :
+				Console.WriteLine("Default");
+		    break;
+		}
+		
+	}
+	 public  void Forloop()
+	 {
+		 Console.Write("Enter Text");
+		 string data = Console.ReadLine();
+         string Rev = "";
+		 for(int i = data.Length -1; i >= 0 ; i--)
+		 {
+			 
+			 Rev += data[i];
+		 }
+		 Console.WriteLine(Rev);
+		 
+	 }
+	public static void DoWhile()
+	{
+		Console.WriteLine("Enter Text");
+		string Data = Console.ReadLine();
+		int counter = 0;
+		do{
+			Console.WriteLine(Data);
+			counter ++;
+		}
+		while(counter < Data.Length -1);
+		Console.WriteLine("----------------------------------------");
+		//for (int i = 0; i < 5; i++) 
+		for(int i = 0; i < Data.Length -1;i++)
+		{
+			Console.WriteLine(Data);
+		}
+		Console.WriteLine("----------------------------------------");
+		
+	}
+	public static void Stars()
+	{
+		 for (int i = 1; i <= 6; ++i) {
+         for (int j = 1; j <= i; ++j) {
+            Console.Write("*");
+         }
+         Console.WriteLine();
+      }
+		Console.WriteLine("------------------------");
+		
+       for (int row = 8; row >= 1; --row)
+        {
+          for (int j = 1; j <= row; ++j)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
+        }
+		Console.WriteLine("------------------------");
+		int number, k, count,ii = 1;
+        number = 6;
+        count = number - 1;
+        for (k = 1; k <= number; k++)
+        {
+            for ( ii = 1; ii <= count; ii++)
+                Console.Write(" ");
+            count--;
+            for (ii = 1; ii <= 2 * k - 1; ii++)
+                Console.Write("*");
+            Console.WriteLine();
+        }
+        count = 1;
+        for (k = 1; k <= number - 1; k++)
+        {
+            for (ii = 1; ii <= count; ii++)
+                Console.Write(" ");
+            count++;
+            for (ii = 1; ii <= 2 * (number - k) - 1; ii++)
+                Console.Write("*");
+            Console.WriteLine();
+        }
+		Console.WriteLine("-----------------");
+		Console.WriteLine("------------------------");
+		//int number, k, count,ii = 1;
+        number = 6;
+        count = number - 1;
+        for (k = 1; k <= number; k++)
+        {
+            for ( ii = 1; ii <= count; ii++)
+                Console.Write(" ");
+            count--;
+            for (ii = 1; ii <= 2 * k - 1; ii++)
+                Console.Write("*");
+            Console.WriteLine();
+        }
+	} 
+}
